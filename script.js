@@ -1,7 +1,7 @@
 let count = 1;
 let count2 = 1;
 const LIMIT1 = 6;
-const LIMIT2 = 3;
+const LIMIT2 = 6;
 const TIME_NEXT_SLIDE = 4000;
 
 next_slide_front  = () => {
@@ -28,3 +28,15 @@ function openMenu () {
 function closeMenu () {
     document.body.classList.remove("menu-expanded");
 }
+
+ScrollReveal({origin:'top', distance:'30px', duration:700}).reveal(`
+#title, 
+#title .slider,
+#todo-tipo,
+#conjunto-roupas,
+#acessar-catalogo,
+#encontrar-roupa,
+#localizacao,
+#contato,
+footer
+`)

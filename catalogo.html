@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper text-font-pattern">
+            <h1>Amaral</h1>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a onclick="closeMenu()" href="#title">Inicio</a>
+                    </li>
+                    <li>
+                        <a onclick="closeMenu()" href="#acessar-catalogo">Catálogo</a>
+                    </li>
+                    <li>
+                        <a onclick="closeMenu()" href="#localizacao">Localização</a>
+                    </li>
+                </ul>
+            </div>
+            <button 
+                aria-expanded="true"
+                aria-label="Fechar menu"
+                onClick="closeMenu()"
+                class="close-menu"
+            >
+            <svg id="draw_three" width=70 height=40>
+                <polyline style="stroke-linejoin:miter; stroke:lightgray; 
+                stroke-width:4; fill: none;"
+                points="10 10, 50 10" />
+                <polyline style="stroke-linejoin:miter; stroke:lightgray; 
+                stroke-width:4; fill: none;"
+                points="10 20, 50 20" />
+                <polyline style="stroke-linejoin:miter; stroke:lightgray; 
+                stroke-width:4; fill: none;"
+                points="10 30, 50 30" />
+            </svg>
+            </button>
+            <a
+                aria-expanded="false"
+                aria-label="Abrir menu"
+                onClick="openMenu()"
+                class="open-menu"
+            >
+                <svg id="draw_three" width=70 height=40>
+                    <polyline style="stroke-linejoin:miter; stroke:lightgray; 
+                    stroke-width:4; fill: none;"
+                    points="10 10, 50 10" />
+                    <polyline style="stroke-linejoin:miter; stroke:lightgray; 
+                    stroke-width:4; fill: none;"
+                    points="10 20, 50 20" />
+                    <polyline style="stroke-linejoin:miter; stroke:lightgray; 
+                    stroke-width:4; fill: none;"
+                    points="10 30, 50 30" />
+                </svg>
+            </a>
+        </div>  
+    </nav>
+    <header id="topo">
+        <div class="wrapper">
+            <div id="informacoes-catalogo">
+                <h3>Explore nossas categorias de roupas em nosso catálogo</h3>
+                <p>Neste catálogo temos muito mais do que você pode imaginar de roupas</p>
+            </div>
+        </div>
+    </header>
+    <section id="catalogo">
+        <div class="wrapper">
+            <form method="post">
+                <select name="sexo">
+                    <option value="masculino">Roupas Masculinas</option>
+                    <option value="feminino">Roupas Femininas</option>
+                </select>
+                <select name="idade">
+                    <option value="adulto" selected>Adulto</option>
+                    <option value="juvenil">Juvenil</option>
+                    <option value="infantil">Infantil</option>
+                </select>
+                <select name="tipo">
+                    <option value="calças">Calças</option>
+                    <option value="camisas">Camisas</option>
+                    <option value="saias">Saias</option>
+                    <option value="sapatos">Sapatos</option>
+                    <option value="shorts">Shorts</option>
+                     <option value="vestidos">Vestidos</option>
+                </select>
+                <input type="text" name="de" placeholder="De R$..." size="6" />
+                <input type="text" name="ate" placeholder="Até R$..." size="6" />
+                <button>Pesquisar</button>
+                <div id="galeria"></div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="wrapper">
+            <div id="position">
+                <a href="#topo">Cat&aacutelogo</a><a href="./index.html">Página inicial</a>
+            </div>
+            <p id="footer_bottom_alliance">2022 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

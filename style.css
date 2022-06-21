@@ -6,8 +6,9 @@
 
 :root {
     font-size:62.5%;
-    --textColor: darkolivegreen;
+    --textColor: #7d1a23;
     --colorBgNav : hsl(14, 72%, 57%);
+    --colorBGBody: rgb(226, 207, 189);
 }
 
 html {
@@ -16,11 +17,12 @@ html {
 
 body {
     font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:var(--colorBGBody);
 }
 
 nav h1 {
     font-size:4.0rem;
-    color:var(--textColor);
+    color:white;
 }
 
 .wrapper {
@@ -47,7 +49,6 @@ nav .wrapper {
     display:flex;
     flex-direction:row;
     justify-content: space-between;
-
 }
 
 .menu {
@@ -81,6 +82,11 @@ header {
     text-align:center;
 }
 
+/* #title .wrapper{
+    background-color:yellow;
+    margin-inline:auto;
+} */
+
 /* Slider */
 
 .slider {
@@ -110,12 +116,12 @@ header {
 
 .slider label {
     background-color: #000;
-    bottom: 10px;
-    cursor: pointer;
-    display: block;
-    height: 10px;
-    position: absolute;
     width: 10px;
+    height: 10px;
+    bottom: 10px;
+    display: block;
+    position: absolute;
+    cursor: pointer;
     z-index: 10;
 }
 
@@ -157,7 +163,7 @@ left: 70px;
 /* sections */
 
 #todo-tipo {
-    margin-top:35rem;
+    margin-top:25rem;
 }
 
 #conjunto-roupas {
@@ -165,11 +171,11 @@ left: 70px;
 }
 
 #localizacao {
-    margin-top:10rem;
+    padding-top:15rem;
 }
 
 #acessar-catalogo {
-    margin-top:16rem;
+    padding-top:16rem;
 }
 
 #acessar-catalogo button {
@@ -251,11 +257,11 @@ body.menu-expanded .menu {
     position:fixed;
     top:0;
     left:0;
-    background: var(--colorBgNav);
+    background: var(--colorBGBody);
     width:100vw;
     height:100vh;
     transform:translate(0);
-    font-size:4rem;
+    font-size:2rem;
 }
 
 body.menu-expanded .menu ul {
@@ -265,7 +271,120 @@ body.menu-expanded .menu ul {
     gap:6rem;
 }
 
-.open-menu {
-    background-color: var(--colorBgNav);
 
+/* Catálogo */
+
+#catalogo form{
+     margin-top:4rem;
+}
+
+#informacoes-catalogo {
+    line-height:150%;   
+}
+
+#informacoes-catalogo p {
+    display:block;
+    margin-block:2rem;
+}
+
+#galeria {
+    display:block;
+    width:100%;
+    height:40rem;
+    border: 2px solid var(--colorBgNav);
+    margin-block:2rem;
+    background-color:white;
+}
+
+#catalogo form button {
+    display:block;
+    margin-block:1rem;
+}
+
+#position a {
+    color:black;
+}
+
+button {
+    width:30rem;
+    margin-inline:auto;
+}
+
+.map-responsible {
+    margin-inline:auto;
+}
+
+.conjunto{
+    margin-inline:auto;
+    display:flex;
+    flex-direction:row;
+} 
+
+@media (min-width:1024px) {
+     .wrapper {
+        width:min(112rem, 100%);
+        display:grid;
+    }
+    
+    #agrupamento {
+        display:grid;
+        grid-template-columns:50% 50% 50%;
+        grid-template-areas:
+        'A B'
+        'C C';
+        /* align-items:stretch; */
+        align-items:flex-start;
+    }
+
+    .col-a {
+        grid-area:A;
+        background:yellow;
+    }
+
+    #todo-tipo {
+        background:orange;
+        /* width:60rem; */
+        height:10rem;
+        /* border:1px solid green; */
+        /* align-self:flex-start; */
+        /* position:absolute; */
+        /* top:-115px; */
+    }
+
+    #conjunto-roupas {
+        /* background:orange; */
+        /* align-self:center; */
+    }
+
+    .col-b {
+        grid-area:B;
+    }
+
+    .col-c {
+        grid-area:C;
+    }
+
+    #agrupamento .col-a {
+        position:relative;
+        /* background:orange; */
+    }
+
+
+    #title ul li img,
+    #segunda-parte ul li img {
+        width:67rem;
+        height:33rem;
+    }
+
+    #title {
+        margin-bottom:12rem;
+    }
+
+    #localizacao .map-responsible,
+    #localizacao .map-responsible iframe,
+    #title section article ul,
+    #segunda-parte ul {
+        width:67rem;
+        /* translateX(50%); */
+    }
 }
