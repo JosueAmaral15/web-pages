@@ -338,11 +338,11 @@ button {
 
     .col-a {
         grid-area:A;
-        background:yellow;
+        /* background:yellow; */
     }
 
     #todo-tipo {
-        background:orange;
+        /* background:orange; */
         /* width:60rem; */
         height:10rem;
         /* border:1px solid green; */
